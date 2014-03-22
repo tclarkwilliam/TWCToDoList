@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47CB6D0D18DE367700BECD1C /* NSDateFormatter+TWCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CB6D0C18DE367700BECD1C /* NSDateFormatter+TWCDateFormatter.m */; };
 		47DE6C3A18DB952E00F89AA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3918DB952E00F89AA2 /* Foundation.framework */; };
 		47DE6C3C18DB952E00F89AA2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3B18DB952E00F89AA2 /* CoreGraphics.framework */; };
 		47DE6C3E18DB952E00F89AA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3D18DB952E00F89AA2 /* UIKit.framework */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47CB6D0B18DE367700BECD1C /* NSDateFormatter+TWCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+TWCDateFormatter.h"; sourceTree = "<group>"; };
+		47CB6D0C18DE367700BECD1C /* NSDateFormatter+TWCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+TWCDateFormatter.m"; sourceTree = "<group>"; };
 		47DE6C3618DB952E00F89AA2 /* TWCToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DE6C3918DB952E00F89AA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47DE6C3B18DB952E00F89AA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -96,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47CB6D0A18DE367700BECD1C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				47CB6D0B18DE367700BECD1C /* NSDateFormatter+TWCDateFormatter.h */,
+				47CB6D0C18DE367700BECD1C /* NSDateFormatter+TWCDateFormatter.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		47DE6C2D18DB952E00F89AA2 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 		47DE6CAC18DD9DEC00F89AA2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				47CB6D0A18DE367700BECD1C /* Categories */,
 				47DE6CC218DD9E6600F89AA2 /* TWCToDoList */,
 			);
 			path = Classes;
@@ -336,6 +349,7 @@
 				47DE6CC118DD9DED00F89AA2 /* TWCToDoListAppDelegate.m in Sources */,
 				47DE6C4818DB952E00F89AA2 /* main.m in Sources */,
 				47DE6C4F18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld in Sources */,
+				47CB6D0D18DE367700BECD1C /* NSDateFormatter+TWCDateFormatter.m in Sources */,
 				47DE6CD518DD9E6600F89AA2 /* TWCToDoListCell.m in Sources */,
 				47DE6CD118DD9E6600F89AA2 /* TWCToDoListEditViewController.m in Sources */,
 			);
