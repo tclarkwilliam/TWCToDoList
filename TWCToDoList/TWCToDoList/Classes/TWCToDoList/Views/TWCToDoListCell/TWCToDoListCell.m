@@ -8,15 +8,31 @@
 
 #import "TWCToDoListCell.h"
 
+// Categories
+#import "NSDateFormatter+TWCDateFormatter.h"
+
 @interface TWCToDoListCell ()
+
+@property (nonatomic, weak) IBOutlet UILabel *dateTextLabel;
 
 @end
 
 @implementation TWCToDoListCell
 
-- (void)awakeFromNib;
+- (void)awakeFromNib;	
 {
   [super awakeFromNib];
+  
+  [self configureText];
+}
+
+- (void)configureText;
+{
+  NSDate *currentDate = [NSDate date];
+  NSDateFormatter *dateFormatter = [NSDateFormatter twc_dateFormatter];
+  NSString *string = [dateFormatter stringFromDate:currentDate];
+  
+  self.dateTextLabel.text = string;
 }
 
 @end
