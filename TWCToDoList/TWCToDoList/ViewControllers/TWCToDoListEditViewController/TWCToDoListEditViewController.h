@@ -10,4 +10,6 @@
 
 @interface TWCToDoListEditViewController : UIViewController
 
+@property (nonatomic, copy) void (^onCompletion)(void);
+
 @end
