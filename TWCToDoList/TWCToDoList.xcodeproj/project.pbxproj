@@ -21,13 +21,13 @@
 		47DE6C5B18DB952E00F89AA2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3F18DB952E00F89AA2 /* CoreData.framework */; };
 		47DE6C6318DB952E00F89AA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6C6118DB952E00F89AA2 /* InfoPlist.strings */; };
 		47DE6C6518DB952E00F89AA2 /* TWCToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6C6418DB952E00F89AA2 /* TWCToDoListTests.m */; };
-		47DE6C8718DBAAAD00F89AA2 /* TWCToDoListAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6C8618DBAAAD00F89AA2 /* TWCToDoListAppDelegate.m */; };
-		47DE6CA618DD0C0E00F89AA2 /* TWCToDoListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6C9B18DD0C0E00F89AA2 /* TWCToDoListEditViewController.m */; };
-		47DE6CA718DD0C0E00F89AA2 /* TWCToDoListEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6C9C18DD0C0E00F89AA2 /* TWCToDoListEditViewController.xib */; };
-		47DE6CA818DD0C0E00F89AA2 /* TWCToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6C9F18DD0C0E00F89AA2 /* TWCToDoListTableViewController.m */; };
-		47DE6CA918DD0C0E00F89AA2 /* TWCToDoListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6CA018DD0C0E00F89AA2 /* TWCToDoListTableViewController.xib */; };
-		47DE6CAA18DD0C0E00F89AA2 /* TWCToDoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6CA418DD0C0E00F89AA2 /* TWCToDoListCell.m */; };
-		47DE6CAB18DD0C0E00F89AA2 /* TWCToDoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6CA518DD0C0E00F89AA2 /* TWCToDoListCell.xib */; };
+		47DE6CC118DD9DED00F89AA2 /* TWCToDoListAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6CBA18DD9DED00F89AA2 /* TWCToDoListAppDelegate.m */; };
+		47DE6CD118DD9E6600F89AA2 /* TWCToDoListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6CC618DD9E6600F89AA2 /* TWCToDoListEditViewController.m */; };
+		47DE6CD218DD9E6600F89AA2 /* TWCToDoListEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6CC718DD9E6600F89AA2 /* TWCToDoListEditViewController.xib */; };
+		47DE6CD318DD9E6600F89AA2 /* TWCToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6CCA18DD9E6600F89AA2 /* TWCToDoListTableViewController.m */; };
+		47DE6CD418DD9E6600F89AA2 /* TWCToDoListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6CCB18DD9E6600F89AA2 /* TWCToDoListTableViewController.xib */; };
+		47DE6CD518DD9E6600F89AA2 /* TWCToDoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6CCF18DD9E6600F89AA2 /* TWCToDoListCell.m */; };
+		47DE6CD618DD9E6600F89AA2 /* TWCToDoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6CD018DD9E6600F89AA2 /* TWCToDoListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,17 +57,17 @@
 		47DE6C6018DB952E00F89AA2 /* TWCToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TWCToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		47DE6C6218DB952E00F89AA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		47DE6C6418DB952E00F89AA2 /* TWCToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListTests.m; sourceTree = "<group>"; };
-		47DE6C8518DBAAAD00F89AA2 /* TWCToDoListAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListAppDelegate.h; sourceTree = "<group>"; };
-		47DE6C8618DBAAAD00F89AA2 /* TWCToDoListAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListAppDelegate.m; sourceTree = "<group>"; };
-		47DE6C9A18DD0C0E00F89AA2 /* TWCToDoListEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListEditViewController.h; sourceTree = "<group>"; };
-		47DE6C9B18DD0C0E00F89AA2 /* TWCToDoListEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListEditViewController.m; sourceTree = "<group>"; };
-		47DE6C9C18DD0C0E00F89AA2 /* TWCToDoListEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListEditViewController.xib; sourceTree = "<group>"; };
-		47DE6C9E18DD0C0E00F89AA2 /* TWCToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListTableViewController.h; sourceTree = "<group>"; };
-		47DE6C9F18DD0C0E00F89AA2 /* TWCToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListTableViewController.m; sourceTree = "<group>"; };
-		47DE6CA018DD0C0E00F89AA2 /* TWCToDoListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListTableViewController.xib; sourceTree = "<group>"; };
-		47DE6CA318DD0C0E00F89AA2 /* TWCToDoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListCell.h; sourceTree = "<group>"; };
-		47DE6CA418DD0C0E00F89AA2 /* TWCToDoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListCell.m; sourceTree = "<group>"; };
-		47DE6CA518DD0C0E00F89AA2 /* TWCToDoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListCell.xib; sourceTree = "<group>"; };
+		47DE6CB918DD9DED00F89AA2 /* TWCToDoListAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListAppDelegate.h; sourceTree = "<group>"; };
+		47DE6CBA18DD9DED00F89AA2 /* TWCToDoListAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListAppDelegate.m; sourceTree = "<group>"; };
+		47DE6CC518DD9E6600F89AA2 /* TWCToDoListEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListEditViewController.h; sourceTree = "<group>"; };
+		47DE6CC618DD9E6600F89AA2 /* TWCToDoListEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListEditViewController.m; sourceTree = "<group>"; };
+		47DE6CC718DD9E6600F89AA2 /* TWCToDoListEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListEditViewController.xib; sourceTree = "<group>"; };
+		47DE6CC918DD9E6600F89AA2 /* TWCToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListTableViewController.h; sourceTree = "<group>"; };
+		47DE6CCA18DD9E6600F89AA2 /* TWCToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListTableViewController.m; sourceTree = "<group>"; };
+		47DE6CCB18DD9E6600F89AA2 /* TWCToDoListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListTableViewController.xib; sourceTree = "<group>"; };
+		47DE6CCE18DD9E6600F89AA2 /* TWCToDoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListCell.h; sourceTree = "<group>"; };
+		47DE6CCF18DD9E6600F89AA2 /* TWCToDoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListCell.m; sourceTree = "<group>"; };
+		47DE6CD018DD9E6600F89AA2 /* TWCToDoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +130,10 @@
 		47DE6C4118DB952E00F89AA2 /* TWCToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				47DE6C8418DBAAAD00F89AA2 /* TWCToDoListAppDelegate */,
-				47DE6C9818DD0C0E00F89AA2 /* ViewControllers */,
-				47DE6CA118DD0C0E00F89AA2 /* Views */,
+				47DE6CAC18DD9DEC00F89AA2 /* Classes */,
 				47DE6C5018DB952E00F89AA2 /* Images.xcassets */,
+				47DE6CB918DD9DED00F89AA2 /* TWCToDoListAppDelegate.h */,
+				47DE6CBA18DD9DED00F89AA2 /* TWCToDoListAppDelegate.m */,
 				47DE6C4D18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld */,
 				47DE6C4218DB952E00F89AA2 /* Supporting Files */,
 			);
@@ -169,58 +169,66 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		47DE6C8418DBAAAD00F89AA2 /* TWCToDoListAppDelegate */ = {
+		47DE6CAC18DD9DEC00F89AA2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				47DE6C8518DBAAAD00F89AA2 /* TWCToDoListAppDelegate.h */,
-				47DE6C8618DBAAAD00F89AA2 /* TWCToDoListAppDelegate.m */,
+				47DE6CC218DD9E6600F89AA2 /* TWCToDoList */,
 			);
-			path = TWCToDoListAppDelegate;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		47DE6C9818DD0C0E00F89AA2 /* ViewControllers */ = {
+		47DE6CC218DD9E6600F89AA2 /* TWCToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				47DE6C9918DD0C0E00F89AA2 /* TWCToDoListEditViewController */,
-				47DE6C9D18DD0C0E00F89AA2 /* TWCToDoListTableViewController */,
+				47DE6CC318DD9E6600F89AA2 /* ViewControllers */,
+				47DE6CCC18DD9E6600F89AA2 /* Views */,
+			);
+			path = TWCToDoList;
+			sourceTree = "<group>";
+		};
+		47DE6CC318DD9E6600F89AA2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				47DE6CC418DD9E6600F89AA2 /* TWCToDoListEditViewController */,
+				47DE6CC818DD9E6600F89AA2 /* TWCToDoListTableViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		47DE6C9918DD0C0E00F89AA2 /* TWCToDoListEditViewController */ = {
+		47DE6CC418DD9E6600F89AA2 /* TWCToDoListEditViewController */ = {
 			isa = PBXGroup;
 			children = (
-				47DE6C9A18DD0C0E00F89AA2 /* TWCToDoListEditViewController.h */,
-				47DE6C9B18DD0C0E00F89AA2 /* TWCToDoListEditViewController.m */,
-				47DE6C9C18DD0C0E00F89AA2 /* TWCToDoListEditViewController.xib */,
+				47DE6CC518DD9E6600F89AA2 /* TWCToDoListEditViewController.h */,
+				47DE6CC618DD9E6600F89AA2 /* TWCToDoListEditViewController.m */,
+				47DE6CC718DD9E6600F89AA2 /* TWCToDoListEditViewController.xib */,
 			);
 			path = TWCToDoListEditViewController;
 			sourceTree = "<group>";
 		};
-		47DE6C9D18DD0C0E00F89AA2 /* TWCToDoListTableViewController */ = {
+		47DE6CC818DD9E6600F89AA2 /* TWCToDoListTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				47DE6C9E18DD0C0E00F89AA2 /* TWCToDoListTableViewController.h */,
-				47DE6C9F18DD0C0E00F89AA2 /* TWCToDoListTableViewController.m */,
-				47DE6CA018DD0C0E00F89AA2 /* TWCToDoListTableViewController.xib */,
+				47DE6CC918DD9E6600F89AA2 /* TWCToDoListTableViewController.h */,
+				47DE6CCA18DD9E6600F89AA2 /* TWCToDoListTableViewController.m */,
+				47DE6CCB18DD9E6600F89AA2 /* TWCToDoListTableViewController.xib */,
 			);
 			path = TWCToDoListTableViewController;
 			sourceTree = "<group>";
 		};
-		47DE6CA118DD0C0E00F89AA2 /* Views */ = {
+		47DE6CCC18DD9E6600F89AA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				47DE6CA218DD0C0E00F89AA2 /* TWCToDoListCell */,
+				47DE6CCD18DD9E6600F89AA2 /* TWCToDoListCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		47DE6CA218DD0C0E00F89AA2 /* TWCToDoListCell */ = {
+		47DE6CCD18DD9E6600F89AA2 /* TWCToDoListCell */ = {
 			isa = PBXGroup;
 			children = (
-				47DE6CA318DD0C0E00F89AA2 /* TWCToDoListCell.h */,
-				47DE6CA418DD0C0E00F89AA2 /* TWCToDoListCell.m */,
-				47DE6CA518DD0C0E00F89AA2 /* TWCToDoListCell.xib */,
+				47DE6CCE18DD9E6600F89AA2 /* TWCToDoListCell.h */,
+				47DE6CCF18DD9E6600F89AA2 /* TWCToDoListCell.m */,
+				47DE6CD018DD9E6600F89AA2 /* TWCToDoListCell.xib */,
 			);
 			path = TWCToDoListCell;
 			sourceTree = "<group>";
@@ -302,9 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DE6C4618DB952E00F89AA2 /* InfoPlist.strings in Resources */,
-				47DE6CAB18DD0C0E00F89AA2 /* TWCToDoListCell.xib in Resources */,
-				47DE6CA718DD0C0E00F89AA2 /* TWCToDoListEditViewController.xib in Resources */,
-				47DE6CA918DD0C0E00F89AA2 /* TWCToDoListTableViewController.xib in Resources */,
+				47DE6CD618DD9E6600F89AA2 /* TWCToDoListCell.xib in Resources */,
+				47DE6CD218DD9E6600F89AA2 /* TWCToDoListEditViewController.xib in Resources */,
+				47DE6CD418DD9E6600F89AA2 /* TWCToDoListTableViewController.xib in Resources */,
 				47DE6C5118DB952E00F89AA2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,12 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47DE6CA818DD0C0E00F89AA2 /* TWCToDoListTableViewController.m in Sources */,
+				47DE6CD318DD9E6600F89AA2 /* TWCToDoListTableViewController.m in Sources */,
+				47DE6CC118DD9DED00F89AA2 /* TWCToDoListAppDelegate.m in Sources */,
 				47DE6C4818DB952E00F89AA2 /* main.m in Sources */,
 				47DE6C4F18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld in Sources */,
-				47DE6C8718DBAAAD00F89AA2 /* TWCToDoListAppDelegate.m in Sources */,
-				47DE6CAA18DD0C0E00F89AA2 /* TWCToDoListCell.m in Sources */,
-				47DE6CA618DD0C0E00F89AA2 /* TWCToDoListEditViewController.m in Sources */,
+				47DE6CD518DD9E6600F89AA2 /* TWCToDoListCell.m in Sources */,
+				47DE6CD118DD9E6600F89AA2 /* TWCToDoListEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
