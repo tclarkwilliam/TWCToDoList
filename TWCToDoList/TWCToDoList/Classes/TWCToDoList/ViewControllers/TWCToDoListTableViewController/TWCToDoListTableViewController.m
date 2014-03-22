@@ -45,8 +45,9 @@ static NSString * const TWCToDoListCellNibName             = @"TWCToDoListCell";
   TWCToDoListEditViewController *editViewController = [[TWCToDoListEditViewController alloc] init];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:editViewController];
   
+  __weak typeof(self)weakSelf = self;
   editViewController.onCompletion = ^{
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
   };
   
   [self.navigationController presentViewController:navigationController animated:YES completion:nil];
