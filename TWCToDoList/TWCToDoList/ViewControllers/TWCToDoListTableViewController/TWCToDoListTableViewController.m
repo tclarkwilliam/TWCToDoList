@@ -11,7 +11,11 @@
 // View controllers
 #import "TWCToDoListEditViewController.h"
 
+// Views
+#import "TWCToDoListCell.h"
+
 static NSString * const TWCToDoListTableViewCellIdentifier = @"Cell";
+static NSString * const TWCToDoListCellNibName             = @"TWCToDoListCell";
 
 @interface TWCToDoListTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -23,14 +27,20 @@ static NSString * const TWCToDoListTableViewCellIdentifier = @"Cell";
 {
   [super viewDidLoad];
   
+  [self configureNavigationBar];
+  [self registerCell];
+}
+
+- (void)configureNavigationBar;
+{
   self.title = @"To Do List";
   
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                          target:self
-                                                                                         action:@selector(addToDoButtonTapped)];
+                                                                                         action:@selector(addTaskButtonTapped)];
 }
 
-- (void)addToDoButtonTapped;
+- (void)addTaskButtonTapped;
 {
   TWCToDoListEditViewController *editViewController = [[TWCToDoListEditViewController alloc] init];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:editViewController];
@@ -42,27 +52,38 @@ static NSString * const TWCToDoListTableViewCellIdentifier = @"Cell";
   [self.navigationController presentViewController:navigationController animated:YES completion:nil];
 }
 
+- (void)registerCell;
+{
+  UINib *toDoListCell = [UINib nibWithNibName:TWCToDoListCellNibName bundle:nil];
+  [self.tableView registerNib:toDoListCell forCellReuseIdentifier:TWCToDoListTableViewCellIdentifier];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-  return 5;
+  return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TWCToDoListTableViewCellIdentifier];
+  TWCToDoListCell *toDoListcell = [tableView dequeueReusableCellWithIdentifier:TWCToDoListTableViewCellIdentifier];
   
-  if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TWCToDoListTableViewCellIdentifier];
+  if (!toDoListcell) {
+    toDoListcell = [[TWCToDoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TWCToDoListTableViewCellIdentifier];
   }
   
-  return cell;
+  return toDoListcell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+  [self addTaskButtonTapped];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-  return 60.f;
+  return 108.f;
 }
 
 @end
