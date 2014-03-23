@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B47C03F9FCE4E04B3760350 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2199A0716DE449B2A1B9C5FB /* libPods.a */; };
+		47BFF71218DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF6FE18DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.m */; };
+		47BFF71318DF4BBD004C5B58 /* TWCTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF70318DF4BBD004C5B58 /* TWCTask.m */; };
+		47BFF71418DF4BBD004C5B58 /* TWCToDoListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF70718DF4BBD004C5B58 /* TWCToDoListEditViewController.m */; };
+		47BFF71518DF4BBD004C5B58 /* TWCToDoListEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BFF70818DF4BBD004C5B58 /* TWCToDoListEditViewController.xib */; };
+		47BFF71618DF4BBD004C5B58 /* TWCToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF70B18DF4BBD004C5B58 /* TWCToDoListTableViewController.m */; };
+		47BFF71718DF4BBD004C5B58 /* TWCToDoListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BFF70C18DF4BBD004C5B58 /* TWCToDoListTableViewController.xib */; };
+		47BFF71818DF4BBD004C5B58 /* TWCToDoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF71018DF4BBD004C5B58 /* TWCToDoListCell.m */; };
+		47BFF71918DF4BBD004C5B58 /* TWCToDoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BFF71118DF4BBD004C5B58 /* TWCToDoListCell.xib */; };
+		47DE6C3A18DB952E00F89AA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3918DB952E00F89AA2 /* Foundation.framework */; };
+		47DE6C3C18DB952E00F89AA2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3B18DB952E00F89AA2 /* CoreGraphics.framework */; };
+		47DE6C3E18DB952E00F89AA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3D18DB952E00F89AA2 /* UIKit.framework */; };
+		47DE6C4018DB952E00F89AA2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3F18DB952E00F89AA2 /* CoreData.framework */; };
+		47DE6C4618DB952E00F89AA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6C4418DB952E00F89AA2 /* InfoPlist.strings */; };
+		47DE6C4818DB952E00F89AA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6C4718DB952E00F89AA2 /* main.m */; };
+		47DE6C4F18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6C4D18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld */; };
+		47DE6C5118DB952E00F89AA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6C5018DB952E00F89AA2 /* Images.xcassets */; };
+		47DE6C5818DB952E00F89AA2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C5718DB952E00F89AA2 /* XCTest.framework */; };
+		47DE6C5918DB952E00F89AA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3918DB952E00F89AA2 /* Foundation.framework */; };
+		47DE6C5A18DB952E00F89AA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3D18DB952E00F89AA2 /* UIKit.framework */; };
+		47DE6C5B18DB952E00F89AA2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3F18DB952E00F89AA2 /* CoreData.framework */; };
+		47DE6C6318DB952E00F89AA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47DE6C6118DB952E00F89AA2 /* InfoPlist.strings */; };
+		47DE6C6518DB952E00F89AA2 /* TWCToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6C6418DB952E00F89AA2 /* TWCToDoListTests.m */; };
+		47DE6CC118DD9DED00F89AA2 /* TWCToDoListAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DE6CBA18DD9DED00F89AA2 /* TWCToDoListAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47DE6C5C18DB952E00F89AA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47DE6C2E18DB952E00F89AA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47DE6C3518DB952E00F89AA2;
+			remoteInfo = TWCToDoList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2199A0716DE449B2A1B9C5FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BFF6FD18DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+TWCDateFormatter.h"; sourceTree = "<group>"; };
+		47BFF6FE18DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+TWCDateFormatter.m"; sourceTree = "<group>"; };
+		47BFF70218DF4BBD004C5B58 /* TWCTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCTask.h; sourceTree = "<group>"; };
+		47BFF70318DF4BBD004C5B58 /* TWCTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCTask.m; sourceTree = "<group>"; };
+		47BFF70618DF4BBD004C5B58 /* TWCToDoListEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListEditViewController.h; sourceTree = "<group>"; };
+		47BFF70718DF4BBD004C5B58 /* TWCToDoListEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListEditViewController.m; sourceTree = "<group>"; };
+		47BFF70818DF4BBD004C5B58 /* TWCToDoListEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListEditViewController.xib; sourceTree = "<group>"; };
+		47BFF70A18DF4BBD004C5B58 /* TWCToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListTableViewController.h; sourceTree = "<group>"; };
+		47BFF70B18DF4BBD004C5B58 /* TWCToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListTableViewController.m; sourceTree = "<group>"; };
+		47BFF70C18DF4BBD004C5B58 /* TWCToDoListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListTableViewController.xib; sourceTree = "<group>"; };
+		47BFF70F18DF4BBD004C5B58 /* TWCToDoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListCell.h; sourceTree = "<group>"; };
+		47BFF71018DF4BBD004C5B58 /* TWCToDoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListCell.m; sourceTree = "<group>"; };
+		47BFF71118DF4BBD004C5B58 /* TWCToDoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCToDoListCell.xib; sourceTree = "<group>"; };
+		47DE6C3618DB952E00F89AA2 /* TWCToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47DE6C3918DB952E00F89AA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47DE6C3B18DB952E00F89AA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47DE6C3D18DB952E00F89AA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47DE6C3F18DB952E00F89AA2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		47DE6C4318DB952E00F89AA2 /* TWCToDoList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TWCToDoList-Info.plist"; sourceTree = "<group>"; };
+		47DE6C4518DB952E00F89AA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47DE6C4718DB952E00F89AA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47DE6C4918DB952E00F89AA2 /* TWCToDoList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TWCToDoList-Prefix.pch"; sourceTree = "<group>"; };
+		47DE6C4E18DB952E00F89AA2 /* TWCToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TWCToDoList.xcdatamodel; sourceTree = "<group>"; };
+		47DE6C5018DB952E00F89AA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47DE6C5618DB952E00F89AA2 /* TWCToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWCToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47DE6C5718DB952E00F89AA2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		47DE6C6018DB952E00F89AA2 /* TWCToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TWCToDoListTests-Info.plist"; sourceTree = "<group>"; };
+		47DE6C6218DB952E00F89AA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47DE6C6418DB952E00F89AA2 /* TWCToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListTests.m; sourceTree = "<group>"; };
+		47DE6CB918DD9DED00F89AA2 /* TWCToDoListAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCToDoListAppDelegate.h; sourceTree = "<group>"; };
+		47DE6CBA18DD9DED00F89AA2 /* TWCToDoListAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListAppDelegate.m; sourceTree = "<group>"; };
+		BC8DF95336F84B778E31FDB7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47DE6C3318DB952E00F89AA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47DE6C3C18DB952E00F89AA2 /* CoreGraphics.framework in Frameworks */,
+				47DE6C4018DB952E00F89AA2 /* CoreData.framework in Frameworks */,
+				47DE6C3E18DB952E00F89AA2 /* UIKit.framework in Frameworks */,
+				47DE6C3A18DB952E00F89AA2 /* Foundation.framework in Frameworks */,
+				1B47C03F9FCE4E04B3760350 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47DE6C5318DB952E00F89AA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47DE6C5818DB952E00F89AA2 /* XCTest.framework in Frameworks */,
+				47DE6C5B18DB952E00F89AA2 /* CoreData.framework in Frameworks */,
+				47DE6C5A18DB952E00F89AA2 /* UIKit.framework in Frameworks */,
+				47DE6C5918DB952E00F89AA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47BFF6FB18DF4BBD004C5B58 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF6FC18DF4BBD004C5B58 /* Categories */,
+				47BFF6FF18DF4BBD004C5B58 /* TWCToDoList */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		47BFF6FC18DF4BBD004C5B58 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF6FD18DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.h */,
+				47BFF6FE18DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		47BFF6FF18DF4BBD004C5B58 /* TWCToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF70018DF4BBD004C5B58 /* Models */,
+				47BFF70418DF4BBD004C5B58 /* ViewControllers */,
+				47BFF70D18DF4BBD004C5B58 /* Views */,
+			);
+			path = TWCToDoList;
+			sourceTree = "<group>";
+		};
+		47BFF70018DF4BBD004C5B58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF70118DF4BBD004C5B58 /* TWCToDoListTask */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		47BFF70118DF4BBD004C5B58 /* TWCToDoListTask */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF70218DF4BBD004C5B58 /* TWCTask.h */,
+				47BFF70318DF4BBD004C5B58 /* TWCTask.m */,
+			);
+			path = TWCToDoListTask;
+			sourceTree = "<group>";
+		};
+		47BFF70418DF4BBD004C5B58 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF70518DF4BBD004C5B58 /* TWCToDoListEditViewController */,
+				47BFF70918DF4BBD004C5B58 /* TWCToDoListTableViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		47BFF70518DF4BBD004C5B58 /* TWCToDoListEditViewController */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF70618DF4BBD004C5B58 /* TWCToDoListEditViewController.h */,
+				47BFF70718DF4BBD004C5B58 /* TWCToDoListEditViewController.m */,
+				47BFF70818DF4BBD004C5B58 /* TWCToDoListEditViewController.xib */,
+			);
+			path = TWCToDoListEditViewController;
+			sourceTree = "<group>";
+		};
+		47BFF70918DF4BBD004C5B58 /* TWCToDoListTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF70A18DF4BBD004C5B58 /* TWCToDoListTableViewController.h */,
+				47BFF70B18DF4BBD004C5B58 /* TWCToDoListTableViewController.m */,
+				47BFF70C18DF4BBD004C5B58 /* TWCToDoListTableViewController.xib */,
+			);
+			path = TWCToDoListTableViewController;
+			sourceTree = "<group>";
+		};
+		47BFF70D18DF4BBD004C5B58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF70E18DF4BBD004C5B58 /* TWCToDoListCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47BFF70E18DF4BBD004C5B58 /* TWCToDoListCell */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF70F18DF4BBD004C5B58 /* TWCToDoListCell.h */,
+				47BFF71018DF4BBD004C5B58 /* TWCToDoListCell.m */,
+				47BFF71118DF4BBD004C5B58 /* TWCToDoListCell.xib */,
+			);
+			path = TWCToDoListCell;
+			sourceTree = "<group>";
+		};
+		47DE6C2D18DB952E00F89AA2 = {
+			isa = PBXGroup;
+			children = (
+				47DE6C4118DB952E00F89AA2 /* TWCToDoList */,
+				47DE6C5E18DB952E00F89AA2 /* TWCToDoListTests */,
+				47DE6C3818DB952E00F89AA2 /* Frameworks */,
+				47DE6C3718DB952E00F89AA2 /* Products */,
+				BC8DF95336F84B778E31FDB7 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		47DE6C3718DB952E00F89AA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47DE6C3618DB952E00F89AA2 /* TWCToDoList.app */,
+				47DE6C5618DB952E00F89AA2 /* TWCToDoListTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47DE6C3818DB952E00F89AA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47DE6C3918DB952E00F89AA2 /* Foundation.framework */,
+				47DE6C3B18DB952E00F89AA2 /* CoreGraphics.framework */,
+				47DE6C3D18DB952E00F89AA2 /* UIKit.framework */,
+				47DE6C3F18DB952E00F89AA2 /* CoreData.framework */,
+				47DE6C5718DB952E00F89AA2 /* XCTest.framework */,
+				2199A0716DE449B2A1B9C5FB /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47DE6C4118DB952E00F89AA2 /* TWCToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				47BFF6FB18DF4BBD004C5B58 /* Classes */,
+				47DE6C5018DB952E00F89AA2 /* Images.xcassets */,
+				47DE6CB918DD9DED00F89AA2 /* TWCToDoListAppDelegate.h */,
+				47DE6CBA18DD9DED00F89AA2 /* TWCToDoListAppDelegate.m */,
+				47DE6C4D18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld */,
+				47DE6C4218DB952E00F89AA2 /* Supporting Files */,
+			);
+			path = TWCToDoList;
+			sourceTree = "<group>";
+		};
+		47DE6C4218DB952E00F89AA2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47DE6C4318DB952E00F89AA2 /* TWCToDoList-Info.plist */,
+				47DE6C4418DB952E00F89AA2 /* InfoPlist.strings */,
+				47DE6C4718DB952E00F89AA2 /* main.m */,
+				47DE6C4918DB952E00F89AA2 /* TWCToDoList-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47DE6C5E18DB952E00F89AA2 /* TWCToDoListTests */ = {
+			isa = PBXGroup;
+			children = (
+				47DE6C6418DB952E00F89AA2 /* TWCToDoListTests.m */,
+				47DE6C5F18DB952E00F89AA2 /* Supporting Files */,
+			);
+			path = TWCToDoListTests;
+			sourceTree = "<group>";
+		};
+		47DE6C5F18DB952E00F89AA2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47DE6C6018DB952E00F89AA2 /* TWCToDoListTests-Info.plist */,
+				47DE6C6118DB952E00F89AA2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47DE6C3518DB952E00F89AA2 /* TWCToDoList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47DE6C6818DB952E00F89AA2 /* Build configuration list for PBXNativeTarget "TWCToDoList" */;
+			buildPhases = (
+				3A9E91B835E444AF95445F0A /* Check Pods Manifest.lock */,
+				47DE6C3218DB952E00F89AA2 /* Sources */,
+				47DE6C3318DB952E00F89AA2 /* Frameworks */,
+				47DE6C3418DB952E00F89AA2 /* Resources */,
+				7E0933BDD96C4138BAE9ABA8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TWCToDoList;
+			productName = TWCToDoList;
+			productReference = 47DE6C3618DB952E00F89AA2 /* TWCToDoList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47DE6C5518DB952E00F89AA2 /* TWCToDoListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47DE6C6B18DB952E00F89AA2 /* Build configuration list for PBXNativeTarget "TWCToDoListTests" */;
+			buildPhases = (
+				47DE6C5218DB952E00F89AA2 /* Sources */,
+				47DE6C5318DB952E00F89AA2 /* Frameworks */,
+				47DE6C5418DB952E00F89AA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47DE6C5D18DB952E00F89AA2 /* PBXTargetDependency */,
+			);
+			name = TWCToDoListTests;
+			productName = TWCToDoListTests;
+			productReference = 47DE6C5618DB952E00F89AA2 /* TWCToDoListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47DE6C2E18DB952E00F89AA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TWCToDoList;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Tom Clark";
+				TargetAttributes = {
+					47DE6C5518DB952E00F89AA2 = {
+						TestTargetID = 47DE6C3518DB952E00F89AA2;
+					};
+				};
+			};
+			buildConfigurationList = 47DE6C3118DB952E00F89AA2 /* Build configuration list for PBXProject "TWCToDoList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 47DE6C2D18DB952E00F89AA2;
+			productRefGroup = 47DE6C3718DB952E00F89AA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47DE6C3518DB952E00F89AA2 /* TWCToDoList */,
+				47DE6C5518DB952E00F89AA2 /* TWCToDoListTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47DE6C3418DB952E00F89AA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47DE6C4618DB952E00F89AA2 /* InfoPlist.strings in Resources */,
+				47BFF71918DF4BBD004C5B58 /* TWCToDoListCell.xib in Resources */,
+				47BFF71518DF4BBD004C5B58 /* TWCToDoListEditViewController.xib in Resources */,
+				47BFF71718DF4BBD004C5B58 /* TWCToDoListTableViewController.xib in Resources */,
+				47DE6C5118DB952E00F89AA2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47DE6C5418DB952E00F89AA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47DE6C6318DB952E00F89AA2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A9E91B835E444AF95445F0A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E0933BDD96C4138BAE9ABA8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47DE6C3218DB952E00F89AA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47BFF71618DF4BBD004C5B58 /* TWCToDoListTableViewController.m in Sources */,
+				47BFF71318DF4BBD004C5B58 /* TWCTask.m in Sources */,
+				47DE6CC118DD9DED00F89AA2 /* TWCToDoListAppDelegate.m in Sources */,
+				47DE6C4818DB952E00F89AA2 /* main.m in Sources */,
+				47BFF71818DF4BBD004C5B58 /* TWCToDoListCell.m in Sources */,
+				47DE6C4F18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld in Sources */,
+				47BFF71218DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.m in Sources */,
+				47BFF71418DF4BBD004C5B58 /* TWCToDoListEditViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47DE6C5218DB952E00F89AA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47DE6C6518DB952E00F89AA2 /* TWCToDoListTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47DE6C5D18DB952E00F89AA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47DE6C3518DB952E00F89AA2 /* TWCToDoList */;
+			targetProxy = 47DE6C5C18DB952E00F89AA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47DE6C4418DB952E00F89AA2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47DE6C4518DB952E00F89AA2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		47DE6C6118DB952E00F89AA2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47DE6C6218DB952E00F89AA2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47DE6C6618DB952E00F89AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		47DE6C6718DB952E00F89AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47DE6C6918DB952E00F89AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC8DF95336F84B778E31FDB7 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TWCToDoList/TWCToDoList-Prefix.pch";
+				INFOPLIST_FILE = "TWCToDoList/TWCToDoList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47DE6C6A18DB952E00F89AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC8DF95336F84B778E31FDB7 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TWCToDoList/TWCToDoList-Prefix.pch";
+				INFOPLIST_FILE = "TWCToDoList/TWCToDoList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		47DE6C6C18DB952E00F89AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TWCToDoList.app/TWCToDoList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TWCToDoList/TWCToDoList-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TWCToDoListTests/TWCToDoListTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		47DE6C6D18DB952E00F89AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TWCToDoList.app/TWCToDoList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TWCToDoList/TWCToDoList-Prefix.pch";
+				INFOPLIST_FILE = "TWCToDoListTests/TWCToDoListTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47DE6C3118DB952E00F89AA2 /* Build configuration list for PBXProject "TWCToDoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47DE6C6618DB952E00F89AA2 /* Debug */,
+				47DE6C6718DB952E00F89AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47DE6C6818DB952E00F89AA2 /* Build configuration list for PBXNativeTarget "TWCToDoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47DE6C6918DB952E00F89AA2 /* Debug */,
+				47DE6C6A18DB952E00F89AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47DE6C6B18DB952E00F89AA2 /* Build configuration list for PBXNativeTarget "TWCToDoListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47DE6C6C18DB952E00F89AA2 /* Debug */,
+				47DE6C6D18DB952E00F89AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		47DE6C4D18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47DE6C4E18DB952E00F89AA2 /* TWCToDoList.xcdatamodel */,
+			);
+			currentVersion = 47DE6C4E18DB952E00F89AA2 /* TWCToDoList.xcdatamodel */;
+			path = TWCToDoList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 47DE6C2E18DB952E00F89AA2 /* Project object */;
+}
