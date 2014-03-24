@@ -12,5 +12,6 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *titleTextlabel;
 @property (nonatomic, weak) IBOutlet UILabel *additionalTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *dateTextLabel;
 
 @end

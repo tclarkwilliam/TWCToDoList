@@ -100,6 +100,7 @@ static NSString * const TWCToDoListCellNibName             = @"TWCToDoListCell";
   
   toDoListcell.titleTextlabel.text      = task.title;
   toDoListcell.additionalTextLabel.text = task.additionalText;
+  toDoListcell.dateTextLabel.text       = task.date;
   
   return toDoListcell;
 }

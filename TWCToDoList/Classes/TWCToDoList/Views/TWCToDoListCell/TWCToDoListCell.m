@@ -13,7 +13,10 @@
 
 @interface TWCToDoListCell ()
 
-@property (nonatomic, weak) IBOutlet UILabel *dateTextLabel;
+@property (nonatomic, weak) IBOutlet UIButton *checkButton;
+@property (nonatomic, assign)        BOOL      checkButtonSelected;
+
+- (IBAction)checkButtonTapped:(id)sender;
 
 @end
 
@@ -23,16 +26,35 @@
 {
   [super awakeFromNib];
   
-  [self configureText];
+  self.checkButtonSelected = NO;
+
+  [self configureUserInterface];
 }
 
-- (void)configureText;
+- (void)configureUserInterface;
 {
-  NSDate *currentDate = [NSDate date];
-  NSDateFormatter *dateFormatter = [NSDateFormatter twc_dateFormatter];
-  NSString *string = [dateFormatter stringFromDate:currentDate];
+  CGRect frameRect = self.checkButton.frame;
+  frameRect.size = CGSizeMake(20.f, 20.f);
+  self.checkButton.frame = frameRect;
   
-  self.dateTextLabel.text = string;
+  self.checkButton.layer.borderWidth  = 1.f;
+  self.checkButton.layer.cornerRadius = 10.f;
+  self.checkButton.layer.borderColor  = [[UIColor grayColor] CGColor];
+}
+
+- (IBAction)checkButtonTapped:(id)sender
+{
+  if (!self.checkButtonSelected){
+    self.checkButton.backgroundColor   = [UIColor lightGrayColor];
+    self.titleTextlabel.textColor      = [UIColor grayColor];
+    self.additionalTextLabel.textColor = [UIColor grayColor];
+		self.checkButtonSelected           = YES;
+	} else {
+    self.checkButton.backgroundColor   = [UIColor clearColor];
+    self.titleTextlabel.textColor      = [UIColor blackColor];
+    self.additionalTextLabel.textColor = [UIColor blackColor];
+		self.checkButtonSelected           = NO;
+	}
 }
 
 @end
