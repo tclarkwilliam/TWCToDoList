@@ -13,5 +13,6 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *additionalText;
+@property (nonatomic, strong) NSString *date;
 
 @end

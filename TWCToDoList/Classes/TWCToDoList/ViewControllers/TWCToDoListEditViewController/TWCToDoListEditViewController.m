@@ -8,6 +8,9 @@
 
 #import "TWCToDoListEditViewController.h"
 
+// Categories
+#import "NSDateFormatter+TWCDateFormatter.h"
+
 // Models
 #import "TWCTask.h"
 
@@ -64,17 +67,38 @@
   if (self.task) {
     self.task.title          = self.titleTextField.text;
     self.task.additionalText = self.descriptionTextView.text;
+    self.task.date           = [self currentdate];
     
   } else {
     TWCTask *task = [TWCTask MR_createInContext:localContext];
     
     task.title          = self.titleTextField.text;
     task.additionalText = self.descriptionTextView.text;
+    task.date           = [self currentdate];
   }
   
   [localContext MR_saveToPersistentStoreAndWait];
   
-  [self dismissViewControllerAnimated:YES completion:nil];
+  if (self.onCompletion) {
+    self.onCompletion();
+  }
+}
+
+- (NSString *)currentdate;
+{
+  NSDate *currentDate = [NSDate date];
+  NSDateFormatter *dateFormatter = [NSDateFormatter twc_dateFormatter];
+  NSString *string = [dateFormatter stringFromDate:currentDate];
+  
+  return string;
+}
+
+- (void)populateView;
+{
+  if (self.task) {
+    self.titleTextField.text      = self.task.title;
+    self.descriptionTextView.text = self.task.additionalText;
+  }
 }
 
 - (void)configureUserInterface;
@@ -101,14 +125,6 @@
   buttonFrameRect.size.height = 45.f;
   self.deleteTaskButton.frame = buttonFrameRect;
   self.deleteTaskButton.layer.cornerRadius = 5.f;
-}
-
-- (void)populateView;
-{
-  if (self.task) {
-    self.titleTextField.text      = self.task.title;
-    self.descriptionTextView.text = self.task.additionalText;
-  }
 }
 
 #pragma mark - Text field delegate methods

@@ -12,5 +12,6 @@
 
 @dynamic title;
 @dynamic additionalText;
+@dynamic date;
 
 @end
