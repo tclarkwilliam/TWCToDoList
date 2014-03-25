@@ -12,11 +12,11 @@
 
 @interface TWCToDoListEditViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UITextField *titleTextField;
-@property (nonatomic, weak) IBOutlet UITextView  *descriptionTextView;
-@property (nonatomic, strong)        TWCTask     *task;
+@property (nonatomic, strong) UITextField *titleTextField;
+@property (nonatomic, strong) UITextView  *descriptionTextView;
+@property (nonatomic, strong) TWCTask     *task;
 
-@property (nonatomic, copy) void (^onCompletion)(void);
-@property (nonatomic, copy) void (^onDeletion)(void);
+@property (nonatomic, copy) void (^onCompletion)(TWCToDoListEditViewController *toDoListEditViewController);
+@property (nonatomic, copy) void (^onDelete)(TWCToDoListEditViewController *toDoListEditViewController);
 
 @end

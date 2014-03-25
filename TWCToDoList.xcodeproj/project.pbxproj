@@ -19,6 +19,8 @@
 		47BFF71B18E0CF4A004C5B58 /* TWCToDoListCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF71A18E0CF4A004C5B58 /* TWCToDoListCellSpec.m */; };
 		47BFF71D18E0D860004C5B58 /* TWCTaskSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF71C18E0D860004C5B58 /* TWCTaskSpec.m */; };
 		47BFF72018E0DDB2004C5B58 /* TWCToDoListEditViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF71E18E0DD5C004C5B58 /* TWCToDoListEditViewControllerSpec.m */; };
+		47BFF72318E0F6CC004C5B58 /* UIColor+TWCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF72218E0F6CC004C5B58 /* UIColor+TWCColor.m */; };
+		47BFF72618E2382A004C5B58 /* UIFont+TWCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF72518E2382A004C5B58 /* UIFont+TWCFont.m */; };
 		47DE6C3A18DB952E00F89AA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3918DB952E00F89AA2 /* Foundation.framework */; };
 		47DE6C3C18DB952E00F89AA2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3B18DB952E00F89AA2 /* CoreGraphics.framework */; };
 		47DE6C3E18DB952E00F89AA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DE6C3D18DB952E00F89AA2 /* UIKit.framework */; };
@@ -65,6 +67,10 @@
 		47BFF71A18E0CF4A004C5B58 /* TWCToDoListCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListCellSpec.m; sourceTree = "<group>"; };
 		47BFF71C18E0D860004C5B58 /* TWCTaskSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCTaskSpec.m; sourceTree = "<group>"; };
 		47BFF71E18E0DD5C004C5B58 /* TWCToDoListEditViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCToDoListEditViewControllerSpec.m; sourceTree = "<group>"; };
+		47BFF72118E0F6CC004C5B58 /* UIColor+TWCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TWCColor.h"; sourceTree = "<group>"; };
+		47BFF72218E0F6CC004C5B58 /* UIColor+TWCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TWCColor.m"; sourceTree = "<group>"; };
+		47BFF72418E2382A004C5B58 /* UIFont+TWCFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+TWCFont.h"; sourceTree = "<group>"; };
+		47BFF72518E2382A004C5B58 /* UIFont+TWCFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+TWCFont.m"; sourceTree = "<group>"; };
 		47DE6C3618DB952E00F89AA2 /* TWCToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DE6C3918DB952E00F89AA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47DE6C3B18DB952E00F89AA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +134,10 @@
 			children = (
 				47BFF6FD18DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.h */,
 				47BFF6FE18DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.m */,
+				47BFF72118E0F6CC004C5B58 /* UIColor+TWCColor.h */,
+				47BFF72218E0F6CC004C5B58 /* UIColor+TWCColor.m */,
+				47BFF72418E2382A004C5B58 /* UIFont+TWCFont.h */,
+				47BFF72518E2382A004C5B58 /* UIFont+TWCFont.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -453,11 +463,13 @@
 			files = (
 				47BFF71618DF4BBD004C5B58 /* TWCToDoListTableViewController.m in Sources */,
 				47BFF71318DF4BBD004C5B58 /* TWCTask.m in Sources */,
+				47BFF72618E2382A004C5B58 /* UIFont+TWCFont.m in Sources */,
 				47DE6CC118DD9DED00F89AA2 /* TWCToDoListAppDelegate.m in Sources */,
 				47DE6C4818DB952E00F89AA2 /* main.m in Sources */,
 				47BFF71818DF4BBD004C5B58 /* TWCToDoListCell.m in Sources */,
 				47DE6C4F18DB952E00F89AA2 /* TWCToDoList.xcdatamodeld in Sources */,
 				47BFF71218DF4BBD004C5B58 /* NSDateFormatter+TWCDateFormatter.m in Sources */,
+				47BFF72318E0F6CC004C5B58 /* UIColor+TWCColor.m in Sources */,
 				47BFF71418DF4BBD004C5B58 /* TWCToDoListEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,7 @@
 
 // Categories
 #import "NSDateFormatter+TWCDateFormatter.h"
+#import "UIFont+TWCFont.h"
 
 // Models
 #import "TWCTask.h"
@@ -17,9 +18,12 @@
 // Pods
 #import <MagicalRecord/CoreData+MagicalRecord.h>
 
-@interface TWCToDoListEditViewController () <UITextFieldDelegate>
+static NSString * const TWCToDoListTableViewEditCellIdentifier = @"Cell";
 
-@property (nonatomic, weak) IBOutlet UIButton *deleteTaskButton;
+@interface TWCToDoListEditViewController () <UITextFieldDelegate, UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak)   IBOutlet UIButton    *deleteTaskButton;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 - (IBAction)deleteTaskButtonTapped:(id)sender;
 
@@ -39,9 +43,7 @@
 }
 
 - (void)configureNavigationBar;
-{
-  self.title = @"Task";
-  
+{  
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel"
                                                                            style:UIBarButtonItemStyleDone
                                                                           target:self
@@ -56,7 +58,7 @@
 - (void)cancelButtonTapped;
 {
   if (self.onCompletion) {
-    self.onCompletion();
+    self.onCompletion(self);
   }
 }
 
@@ -80,7 +82,7 @@
   [localContext MR_saveToPersistentStoreAndWait];
   
   if (self.onCompletion) {
-    self.onCompletion();
+    self.onCompletion(self);
   }
 }
 
@@ -103,28 +105,26 @@
 
 - (void)configureUserInterface;
 {
-  CGRect frameRect = self.titleTextField.frame;
-  frameRect.size.height = 45.f;
-  self.titleTextField.frame = frameRect;
+  self.titleTextField = [[UITextField alloc] initWithFrame:CGRectMake(10.f, 0.f, 310.f, 50.f)];
+  self.titleTextField.placeholder  = @"Title";
+  self.titleTextField.font         = [UIFont twc_genericFontOfSize:16.f];
+  self.titleTextField.delegate     = self;
   
-  self.titleTextField.layer.cornerRadius = 5.f;
-  self.titleTextField.layer.borderWidth  = 1.f;
-  self.titleTextField.layer.borderColor  = [[UIColor grayColor] CGColor];
-  self.titleTextField.textColor          = [UIColor grayColor];
-  
-  UIView *spacerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 0)];
-  [self.titleTextField setLeftViewMode:UITextFieldViewModeAlways];
-  [self.titleTextField setLeftView:spacerView];
-  
-  self.descriptionTextView.layer.cornerRadius = 5.f;
-  self.descriptionTextView.layer.borderWidth  = 1.f;
-  self.descriptionTextView.layer.borderColor  = [[UIColor grayColor] CGColor];
-  self.descriptionTextView.textColor          = [UIColor grayColor];
+  self.descriptionTextView = [[UITextView alloc] initWithFrame:CGRectMake(6.f, 0.f, 310.f, 150.f)];
+  self.descriptionTextView.font = [UIFont twc_genericFontOfSize:14.f];
   
   CGRect buttonFrameRect = self.deleteTaskButton.frame;
   buttonFrameRect.size.height = 45.f;
   self.deleteTaskButton.frame = buttonFrameRect;
   self.deleteTaskButton.layer.cornerRadius = 5.f;
+  
+  UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+  [self.tableView addGestureRecognizer:gestureRecognizer];
+}
+
+- (void)dismissKeyboard;
+{
+  [self.view endEditing:YES];
 }
 
 #pragma mark - Text field delegate methods
@@ -134,16 +134,56 @@
   return [textField resignFirstResponder];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-  [self.view endEditing:YES];
-}
-
 - (IBAction)deleteTaskButtonTapped:(id)sender
 {
-  if (self.onDeletion) {
-    self.onDeletion();
+  [[[UIAlertView alloc] initWithTitle:@"Delete task"
+                              message:@"Are you sure you want to delete this task?"
+                             delegate:self
+                    cancelButtonTitle:@"No"
+                    otherButtonTitles:@"Yes", nil] show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+{
+  if (alertView.cancelButtonIndex != buttonIndex) {
+    if (self.onDelete) {
+      self.onDelete(self);
+    }
   }
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+  return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TWCToDoListTableViewEditCellIdentifier];
+  
+  if (!cell) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TWCToDoListTableViewEditCellIdentifier];
+  }
+  
+  if (0 == indexPath.section) {
+    [cell.contentView addSubview:self.titleTextField];
+  } else {
+    [cell.contentView addSubview:self.descriptionTextView];
+  }
+  
+  return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+  return 0 == indexPath.section ? 50.f : 150.f;
 }
 
 @end

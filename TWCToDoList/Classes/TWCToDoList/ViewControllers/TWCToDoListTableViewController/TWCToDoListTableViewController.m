@@ -8,6 +8,10 @@
 
 #import "TWCToDoListTableViewController.h"
 
+// Categories
+#import "UIColor+TWCColor.h"
+#import "UIFont+TWCFont.h"
+
 // Models
 #import "TWCTask.h"
 
@@ -26,6 +30,7 @@ static NSString * const TWCToDoListCellNibName             = @"TWCToDoListCell";
 @interface TWCToDoListTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *tasks;
+@property (nonatomic, strong) UILabel        *taskCompleteLabel;
 
 @end
 
@@ -36,6 +41,7 @@ static NSString * const TWCToDoListCellNibName             = @"TWCToDoListCell";
   [super viewDidLoad];
   
   [self configureNavigationBar];
+  [self configureUserInterface];
   [self registerCell];
 }
 
@@ -60,12 +66,24 @@ static NSString * const TWCToDoListCellNibName             = @"TWCToDoListCell";
   TWCToDoListEditViewController *editViewController = [[TWCToDoListEditViewController alloc] init];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:editViewController];
   
+  editViewController.title = @"Add Task";
+  
   __weak typeof(self)weakSelf = self;
-  editViewController.onCompletion = ^{
+  editViewController.onCompletion = ^(TWCToDoListEditViewController *toDoListEditViewController){
     [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
   };
   
   [self.navigationController presentViewController:navigationController animated:YES completion:nil];
+}
+
+- (void)configureUserInterface;
+{
+  self.taskCompleteLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 125.f, 30.f)];
+  self.taskCompleteLabel.center    = self.view.center;
+  self.taskCompleteLabel.text      = @"No Tasks";
+  self.taskCompleteLabel.font      = [UIFont twc_genericFontOfSize:30.f];
+  self.taskCompleteLabel.textColor = [UIColor twc_navBarButtonItemColor];
+  [self.view addSubview:self.taskCompleteLabel];
 }
 
 - (void)registerCell;
@@ -79,6 +97,8 @@ static NSString * const TWCToDoListCellNibName             = @"TWCToDoListCell";
   self.tasks = [NSMutableArray arrayWithArray:[TWCTask MR_findAll]];
   
   [self.tableView reloadData];
+
+  self.taskCompleteLabel.hidden = 0 < self.tasks.count;
 }
 
 #pragma mark - Table view data source
@@ -113,17 +133,19 @@ static NSString * const TWCToDoListCellNibName             = @"TWCToDoListCell";
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:editViewController];
   
   __weak typeof(self)weakSelf = self;
-  editViewController.onCompletion = ^{
+  editViewController.onCompletion = ^(TWCToDoListEditViewController *toDoListEditViewController){
     [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
   };
   
   editViewController.task = task;
   
-  editViewController.onDeletion = ^{
+  editViewController.title = @"Edit Task";
+  
+  editViewController.onDelete = ^(TWCToDoListEditViewController *toDoListEditViewController){
     
     NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
     
-    [self.tasks removeObjectAtIndex:[indexPath row]];
+    [weakSelf.tasks removeObjectAtIndex:indexPath.row];
     
     [task MR_deleteEntity];
     [localContext MR_saveToPersistentStoreAndWait];
