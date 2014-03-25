@@ -10,13 +10,14 @@
 
 // Categories
 #import "NSDateFormatter+TWCDateFormatter.h"
+#import "UIColor+TWCColor.h"
 
 @interface TWCToDoListCell ()
 
-@property (nonatomic, weak) IBOutlet UIButton *checkButton;
-@property (nonatomic, assign)        BOOL      checkButtonSelected;
+@property (nonatomic, weak) IBOutlet UIButton *taskCompleteButton;
+@property (nonatomic, assign)        BOOL      taskCompleteButtonSelected;
 
-- (IBAction)checkButtonTapped:(id)sender;
+- (IBAction)taskCompleteButtonTapped:(id)sender;
 
 @end
 
@@ -26,34 +27,34 @@
 {
   [super awakeFromNib];
   
-  self.checkButtonSelected = NO;
+  self.taskCompleteButtonSelected = NO;
 
   [self configureUserInterface];
 }
 
 - (void)configureUserInterface;
 {
-  CGRect frameRect = self.checkButton.frame;
+  CGRect frameRect = self.taskCompleteButton.frame;
   frameRect.size = CGSizeMake(20.f, 20.f);
-  self.checkButton.frame = frameRect;
+  self.taskCompleteButton.frame = frameRect;
   
-  self.checkButton.layer.borderWidth  = 1.f;
-  self.checkButton.layer.cornerRadius = 10.f;
-  self.checkButton.layer.borderColor  = [[UIColor grayColor] CGColor];
+  self.taskCompleteButton.layer.borderWidth  = 1.f;
+  self.taskCompleteButton.layer.cornerRadius = 10.f;
+  self.taskCompleteButton.layer.borderColor  = [[UIColor darkGrayColor] CGColor];
 }
 
-- (IBAction)checkButtonTapped:(id)sender
+- (IBAction)taskCompleteButtonTapped:(id)sender
 {
-  if (!self.checkButtonSelected){
-    self.checkButton.backgroundColor   = [UIColor lightGrayColor];
-    self.titleTextlabel.textColor      = [UIColor grayColor];
-    self.additionalTextLabel.textColor = [UIColor grayColor];
-		self.checkButtonSelected           = YES;
+  if (!self.taskCompleteButtonSelected) {
+    self.taskCompleteButton.backgroundColor = [UIColor twc_navBarButtonItemColor];
+    self.titleTextlabel.textColor           = [UIColor lightGrayColor];
+    self.additionalTextLabel.textColor      = [UIColor lightGrayColor];
+		self.taskCompleteButtonSelected         = YES;
 	} else {
-    self.checkButton.backgroundColor   = [UIColor clearColor];
-    self.titleTextlabel.textColor      = [UIColor blackColor];
-    self.additionalTextLabel.textColor = [UIColor blackColor];
-		self.checkButtonSelected           = NO;
+    self.taskCompleteButton.backgroundColor = [UIColor clearColor];
+    self.titleTextlabel.textColor           = [UIColor blackColor];
+    self.additionalTextLabel.textColor      = [UIColor blackColor];
+		self.taskCompleteButtonSelected         = NO;
 	}
 }
 
